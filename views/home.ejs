@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>OAuth Tutorials</title>
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </head>
+    <body>
+        <nav>
+            <div class="nav-wrapper">
+              <a href="/" class="brand-logo">UNiDAYS</a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <% if (user) { %>
+                    <li><a href="/auth/logout">Log out</a></li>
+                    <% } else { %>
+                    <li><a href="/auth/login">Login</a></li>
+                <% } %>
+              </ul>
+            </div>
+          </nav>
+          <div class="container">
+              <div class="section">
+                  <div class="row">
+                      <div class="col l12 s12">
+                        <% if (user) { %>
+                            <h1>It's working!</h1>
+                            <table>
+                                <tr>
+                                    <th>Email</th>
+                                    <td><%= user.email %></td>
+                                </tr>
+                                <tr>
+                                    <th>Name</th>
+                                    <td><%= user.given_name + " " + user.family_name%></td>
+                                </tr>                        
+                            </table>
+                            <% } else { %>
+                            <h1>Welcome</h1>
+                            <p class="flow-text"><a href="/auth/login">Login</a>, to try the functionality out!</p>
+                        <% } %>
+                      </div>
+                  </div>
+              </div>
+          </div>
+    </body>
+</html>
