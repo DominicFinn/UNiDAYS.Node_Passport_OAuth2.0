@@ -4,9 +4,9 @@ const fetch = require('node-fetch')
 const getUserById = async (id) => {
     let data = await fetch('http://localhost:3000/users/' + id);
     if (!data.ok) {
-        return null
+        return null;
     } else {
-        return await data.json()
+        return await data.json();
     }
 }
 
@@ -35,10 +35,10 @@ const User = {
         const existingUser = await this.findById(user.id);
         
         if(existingUser) {
-            callback(null, existingUser)
+            callback(null, existingUser);
         } else {            
-            await createUser(user)
-            callback(null, user)
+            await createUser(user);
+            callback(null, user);
         }
     }
 };
