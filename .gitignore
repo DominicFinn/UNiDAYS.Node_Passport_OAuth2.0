@@ -59,3 +59,5 @@ typings/
 
 keys.js
 
+# don't listen to changes on the base file of this. Note: to change this file, you'd need to remove this entry
+data/users.json
