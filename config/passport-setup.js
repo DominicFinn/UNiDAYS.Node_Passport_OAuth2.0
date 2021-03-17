@@ -18,8 +18,7 @@ passport.use(new OAuth2Strategy({
     tokenURL: 'https://account.myunidays.com/oauth/token',
     clientID: keys.unidays.clientID,
     clientSecret: keys.unidays.clientSecret,
-    callbackURL: "http://localhost:8080/auth/unidays-callback",
-    scope: ['openid', 'name', 'verification']
+    callbackURL: "http://localhost:8080/auth/unidays-callback"
   },
   function(accessToken, refreshToken, profile, cb) {      
     fetch('https://account.myunidays.com/oauth/userinfo', {
