@@ -53,7 +53,7 @@ Providing they allow the data sharing request  and you have permission to access
 
 ## Notes: 
 
-- This repo is just for testing the OAUth installation for Krew. 
+- This repo is just for testing the OAUth installation with UNiDAYS
 - json-server obvs won't work in production (but it's great fun for testing!)
 - let me know if there's any issues!
 - full details of the oauth product from unidays are here https://live-analytics.myunidays.com/tools/oauth
